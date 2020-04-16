@@ -1,5 +1,6 @@
 package com.amigosCode.security.Spring_Security.Student;
 
+import com.amigosCode.security.Spring_Security.Student.Student;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -8,7 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/students")
-public class StudentController {
+public class MemberController {
 
     private static final List<Student> STUDENTS = new ArrayList<>(Arrays.asList(new Student(1, "james bond"),
             new Student(2, "jones")));
@@ -23,8 +24,8 @@ public class StudentController {
     }
 
     @PostMapping
-    public void registerNewStudent(@RequestBody Student student){
+    public void registerNewStudent(@RequestBody Student member){
         System.out.println("registerNewStudent ");
-        System.out.println(student);
+        System.out.println(member);
     }
 }
